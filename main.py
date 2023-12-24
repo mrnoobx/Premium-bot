@@ -213,7 +213,7 @@ def pay_buttons(bot, update):
 
 def jatin_24x_buttons(bot, update):
   buttons = [[
-   pyrogram.types.InlineKeyboardButton("QR Code", url=f"https://graph.org/support-04-04"),
+   pyrogram.types.InlineKeyboardButton("QR Code", url=f"https://telegra.ph/file/078426a49ab11b2b4b274.jpg"),
    ],[
    pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/Chat_Darkpixx_Bot"),
    ],[
