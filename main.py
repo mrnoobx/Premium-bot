@@ -17,13 +17,14 @@ started_message = """
 
 start_message = """
 This Is Premium purchase Bot
-Owned by @CrezyBotz
+Owned by @ultroid_Official
 
 Check The Premium Plans By Click the Button Below 👇"""
 
 pay_message = """
 Pay On This Upi Id 👇
-UPI Handle - yadav-388@paytm
+UPI Handle - ---@paytm
+Dm - @UltroidxTeam
 
 IMPORTANT - After Payment Send Screenshot Here👇"""
 
@@ -139,7 +140,7 @@ def start_buttons(bot, update):
 def contact_buttons(bot, update):
    bot = bot.get_me()
    buttons = [[
-    pyrogram.types.InlineKeyboardButton("Contact Owner ✅", url=f"http://t.me/crezyDevelopers"), # Set Orginal Owner Id Username 
+    pyrogram.types.InlineKeyboardButton("Contact Owner ✅", url=f"http://t.me/ultroidXTeam"), # Set Orginal Owner Id Username 
     ],[
     pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="start"),
     ]]
@@ -154,7 +155,7 @@ def started_buttons(bot, update):
    pyrogram.types.InlineKeyboardButton("☞ 6 Month : ₹399 ", callback_data="onlybotz"),
    pyrogram.types.InlineKeyboardButton("☞ 1 year : ₹699 ", callback_data="cdbotz"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Get Help", url=f"http://t.me/rbofficiallbot"), # Set your Second Contact Id Link Telegram Bot Username
+   pyrogram.types.InlineKeyboardButton("Get Help", url=f"http://t.me/Chat_Darkpixx_Bot"), # Set your Second Contact Id Link Telegram Bot Username
    ],[
    pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="start"),
    ]]
@@ -202,7 +203,7 @@ def onlybotz_buttons(bot, update):
 
 def pay_buttons(bot, update):
   buttons = [[
-   pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/rbofficiallbot"),
+   pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/Chat_Darkpixx_Bot"),
    ],[
    pyrogram.types.InlineKeyboardButton("Get QR code", callback_data="Rakesh"),
    ],[
@@ -214,7 +215,7 @@ def Rakesh_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("QR Code", url=f"https://graph.org/support-04-04"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/rbofficiallbot"),
+   pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/Chat_Darkpixx_Bot"),
    ],[
    pyrogram.types.InlineKeyboardButton("Get Upi Id", callback_data="pay"),
    ],[
@@ -231,6 +232,6 @@ def Info_buttons(bot, update):
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
 print("𝙘𝙧𝙚𝙯𝙮𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘽𝙤𝙩 𝘿𝙚𝙥𝙡𝙤𝙮 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡 ✅")
-print("𝘽𝙤𝙩 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 https://github.com/CrezyDeveloper/Auto-File-Caption")
+print("𝘽𝙤𝙩 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 https://github.com/sahildesai07")
 
 CrezyDeveloperBot.run()
