@@ -6,11 +6,11 @@ try: api_hash = os.environ.get("api_hash", None)
 except Exception as api_id: print(f"⚠️ Api Hash Invalid {api_hash}")
 try: bot_token = os.environ.get("bot_token", None)
 except Exception as bot_token: print(f"⚠️ Bot Token Invalid {bot_token}")
-try: crezy_developer = os.environ.get("crezy_developer", "`{crezy_developer}`")
-except Exception as crezy_developer: print(f"⚠️ Crezy Developer Name Invalid {crezy_developer}")
+try: ultroid_official = os.environ.get("ultroid_official", "`{ultroid_official}`")
+except Exception as ultroid_official: print(f"⚠️ Ultroid_official Name Invalid {ultroid_official}")
 
-CrezyDeveloperBot = pyrogram.Client(
-   name="@CrezyDeveloperBot", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
+ultroid_official = pyrogram.Client(
+   name="@ultroid_official", api_id=app_id, api_hash=api_hash, bot_token=bot_token)
 
 started_message = """
 <b>Selete 1 Premium Membership 👇</b>"""
@@ -28,7 +28,7 @@ Dm - @UltroidxTeam
 
 IMPORTANT - After Payment Send Screenshot Here👇"""
 
-Rakesh_message = """
+jatin_24x_message = """
 Scan The Qr Code Below Button And Send the Screenshot Here👇"""
 
 Info_message = """
@@ -49,7 +49,7 @@ Info_message = """
 contact_message = """
 Please Click Below Button ✅"""
 
-crezybotz_message = """
+MovizTube_message = """
 Wow!!🤯
 You Have Choosen Weekly Bot Membership Of Price ₹19
 Choose Payment Method 👇"""
@@ -59,71 +59,71 @@ Wow!!🤯
 You Have Choosen 1 Month Bot Membership Of Price ₹59
 Choose Payment Method 👇"""
 
-onlybotz_message = """
+ultroidxTeam_message = """
 Wow!!🤯
 You Have Choosen 6 Month Bot Membership Of Price ₹399
 Choose Payment Method 👇"""
 
-cdbotz_message = """
+Darkpixx_message = """
 Wow!!🤯
 You Have Choosen 1 Year Bot Membership Of Price ₹699
 Choose Payment Method 👇"""
 
-@CrezyDeveloperBot.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
+@ultroid_official.on_message(pyrogram.filters.private & pyrogram.filters.command(["start"]))
 def start_command(bot, update):
   update.reply(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_message(pyrogram.filters.private & pyrogram.filters.command(["owner"]))
+@ultroid_official.on_message(pyrogram.filters.private & pyrogram.filters.command(["owner"]))
 def contact_command(bot, update):
   update.reply(contact_message.format(update.from_user.mention), reply_markup=contact_buttons(bot, update), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_message(pyrogram.filters.private & pyrogram.filters.command(["buy"]))
+@ultroid_official.on_message(pyrogram.filters.private & pyrogram.filters.command(["buy"]))
 def started_command(bot, update):
   update.reply(started_message.format(update.from_user.mention), reply_markup=started_buttons(bot, update), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("start"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("start"))
 def strat_callback(bot, update):
   update.message.edit(start_message.format(update.from_user.mention), reply_markup=start_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("owner"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("owner"))
 def strat_callback(bot, update):
   update.message.edit(contact_message.format(update.from_user.mention), reply_markup=contact_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("buy"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("buy"))
 def strat_callback(bot, update):
   update.message.edit(started_message.format(update.from_user.mention), reply_markup=started_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
    
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("about"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("about"))
 def about_callback(bot, update): 
   bot = bot.get_me()
   update.message.edit(about_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=about_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("crezybotz"))
-def crezybotz_callback(bot, update): 
+@ultroid_official.on_callback_query(pyrogram.filters.regex("MovizTube"))
+def MovizTube_callback(bot, update): 
   bot = bot.get_me()
-  update.message.edit(crezybotz_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=crezybotz_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
+  update.message.edit(MovizTube_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=MovizTube_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("onlybotz"))
-def onlybotz_callback(bot, update): 
+@ultroid_official.on_callback_query(pyrogram.filters.regex("ultroidxTeam"))
+def ultroidxTeam_callback(bot, update): 
   bot = bot.get_me()
-  update.message.edit(onlybotz_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=onlybotz_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
+  update.message.edit(ultroidxTeam_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=ultroidxTeam_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("cdbotz"))
-def cdbotz_callback(bot, update): 
+@ultroid_official.on_callback_query(pyrogram.filters.regex("Darkpixx"))
+def Darkpixx_callback(bot, update): 
   bot = bot.get_me()
-  update.message.edit(cdbotz_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=cdbotz_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
+  update.message.edit(Darkpixx_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=Darkpixx_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("pay"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("pay"))
 def pay_callback(bot, update): 
   bot = bot.get_me()
   update.message.edit(pay_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=pay_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("Rakesh"))
-def Rakesh_callback(bot, update): 
+@ultroid_official.on_callback_query(pyrogram.filters.regex("jatin_24x"))
+def jatin_24x_callback(bot, update): 
   bot = bot.get_me()
-  update.message.edit(Rakesh_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=Rakesh_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
+  update.message.edit(jatin_24x_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=jatin_24x_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
 
-@CrezyDeveloperBot.on_callback_query(pyrogram.filters.regex("Info"))
+@ultroid_official.on_callback_query(pyrogram.filters.regex("Info"))
 def Info_callback(bot, update): 
   bot = bot.get_me()
   update.message.edit(Info_message.format(version=pyrogram.__version__, username=bot.mention), reply_markup=Info_buttons(bot, update.message), parse_mode=pyrogram.enums.ParseMode.HTML, disable_web_page_preview=True)
@@ -149,11 +149,11 @@ def contact_buttons(bot, update):
 def started_buttons(bot, update):
   bot = bot.get_me()
   buttons = [[
-   pyrogram.types.InlineKeyboardButton("☞ 1 Week : ₹19 ", callback_data="crezybotz"),
+   pyrogram.types.InlineKeyboardButton("☞ 1 Week : ₹19 ", callback_data="MovizTube"),
    pyrogram.types.InlineKeyboardButton("☞ 1 Month : ₹59 ", callback_data="about"),
    ],[
-   pyrogram.types.InlineKeyboardButton("☞ 6 Month : ₹399 ", callback_data="onlybotz"),
-   pyrogram.types.InlineKeyboardButton("☞ 1 year : ₹699 ", callback_data="cdbotz"),
+   pyrogram.types.InlineKeyboardButton("☞ 6 Month : ₹399 ", callback_data="ultroidxTeam"),
+   pyrogram.types.InlineKeyboardButton("☞ 1 year : ₹699 ", callback_data="Darkpixx"),
    ],[
    pyrogram.types.InlineKeyboardButton("Get Help", url=f"http://t.me/Chat_Darkpixx_Bot"), # Set your Second Contact Id Link Telegram Bot Username
    ],[
@@ -165,37 +165,37 @@ def about_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("Pay On Upi", callback_data="pay"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="Rakesh"),
+   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="jatin_24x"),
    ],[
    pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="buy"),
    ]]
   return pyrogram.types.InlineKeyboardMarkup(buttons)
    
-def crezybotz_buttons(bot, update):
+def MovizTube_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("Pay On Upi", callback_data="pay"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="Rakesh"),
+   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="jatin_24x"),
    ],[
    pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="buy"),
    ]]
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-def cdbotz_buttons(bot, update):
+def Darkpixx_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("Pay On Upi", callback_data="pay"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="Rakesh"),
+   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="jatin_24x"),
    ],[
    pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="buy"),
    ]]
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-def onlybotz_buttons(bot, update):
+def ultroidxTeam_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("Pay On Upi", callback_data="pay"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="Rakesh"),
+   pyrogram.types.InlineKeyboardButton("Scan QR code", callback_data="jatin_24x"),
    ],[
    pyrogram.types.InlineKeyboardButton("🔺Back ", callback_data="buy"),
    ]]
@@ -205,13 +205,13 @@ def pay_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("Send S-Short", url=f"http://t.me/Chat_Darkpixx_Bot"),
    ],[
-   pyrogram.types.InlineKeyboardButton("Get QR code", callback_data="Rakesh"),
+   pyrogram.types.InlineKeyboardButton("Get QR code", callback_data="jatin_24x"),
    ],[
    pyrogram.types.InlineKeyboardButton("Change Plan", callback_data="buy"),
    ]]
   return pyrogram.types.InlineKeyboardMarkup(buttons)
 
-def Rakesh_buttons(bot, update):
+def jatin_24x_buttons(bot, update):
   buttons = [[
    pyrogram.types.InlineKeyboardButton("QR Code", url=f"https://graph.org/support-04-04"),
    ],[
@@ -234,4 +234,4 @@ def Info_buttons(bot, update):
 print("𝙘𝙧𝙚𝙯𝙮𝘿𝙚𝙫𝙚𝙡𝙤𝙥𝙚𝙧 𝘽𝙤𝙩 𝘿𝙚𝙥𝙡𝙤𝙮 𝙎𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡 ✅")
 print("𝘽𝙤𝙩 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 https://github.com/sahildesai07")
 
-CrezyDeveloperBot.run()
+ultroid_official.run()
