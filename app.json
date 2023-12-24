@@ -1,16 +1,16 @@
 {
     "name": "Premium",
     "description": "Premium Membership Subscription",
-    "logo": "https://graph.org/file/a3a93ffb72835499cce.jpg",
+    "logo": "https://telegra.ph/file/b693f93579d7e801bbbc8.jpg",
     "keywords": [
         "Private",
         "Auto",
         "Caption",
         "Bot"
     ],
-    "website": "https://www.youtube.com/@LiveCricketMatch27",
-    "repository": "https://github.com/CrezyDeveloper/premium",
-    "success_url": "https://www.youtube.com/@LiveCricketMatch27",
+    "website": "https://www.youtube.com/ultroidofficial",
+    "repository": "https://github.com/sahildesai07/Premium-bot",
+    "success_url": "https://www.youtube.com/@ultroidofficial",
     "env": {
         "app_id": {
             "description": "Your APP ID From my.telegram.org ",
